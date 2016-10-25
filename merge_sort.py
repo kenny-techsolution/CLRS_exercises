@@ -16,7 +16,7 @@ def merge(seq, p, q, r):
 			seq[i]=right_seq[r_index]
 			r_index +=1
 	#return seq
-		
+
 def merge_sort(seq,p,r):
 	# if p>=r, that means the seq only has one element, no need to do anymore merge_sort
 	if p<r:
