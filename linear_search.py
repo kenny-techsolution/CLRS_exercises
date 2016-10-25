@@ -16,4 +16,3 @@ print(linear_search(input1,input2))
 
 #termination
 #if i is the last element and still not matches v, then we conclude that the array contains no such element as v.
- 
