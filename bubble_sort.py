@@ -1,6 +1,10 @@
-#interesting property
+#Interesting property
 #1. each iteration, the largest num will be bubble up to the most right.
 #2. if the iteration has no swap, then no need to iterate again. 
+#3. the worst case of number of iterations is n-1
+# proof:  
+#	[2,1]=>1
+#	[3,2,1] => 2
 def bubble_sort(seq):
 	swapped = False
 	for j in range(len(seq),-1,-1):
