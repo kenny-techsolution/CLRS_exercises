@@ -1,3 +1,4 @@
+#big O = NlogN
 def find_max_crossing(seq, low, mid, high):
 	sum_left = float("-inf")
 	sum = 0
