@@ -6,10 +6,10 @@ class Priority_Queue:
 		n+=1
 		return 2*n
 	def right(self,n):
-		n+1
+		n+=1
 		return 2*n-1
 	def parent(self,n):
-		n+1
+		n+=1
 		return (n/2)-1
 		
 	def max_heapify(self, i): 
@@ -36,24 +36,20 @@ class Priority_Queue:
 		max = self.seq[0]
 		self.seq[0]=self.seq[-1]
 		self.heap_size -= 1
-		max_heapify(0)
+		self.max_heapify(0)
+		return max
 		
 	def heap_increase_key(self,i,key):
 		if key < i:
-			print("A very specific bad thing happened, key",key,"i",i)
+			print("you shall not lower the key value, i",i,"key",key)
 		self.seq[i]=key
-		print(i,self.seq,key)
 		while i>0 and self.seq[self.parent(i)]<self.seq[i]:
 			self.seq[self.parent(i)], self.seq[i] = self.seq[i], self.seq[self.parent(i)]
 			i =  self.parent(i)
 
 	def max_heap_insert(self,key):
-		print(self.heap_size)
-		if self.heap_size>1:
-			print("max_heapify")
-			self.max_heapify(0)
-			print(self.seq)
 		neg_inf = float("-inf")
+		#to make sure the heap_size needs to be increased or not.
 		if len(self.seq) == self.heap_size:
 			self.seq.append(neg_inf)
 			self.heap_size+=1
@@ -64,8 +60,7 @@ class Priority_Queue:
 
 pq = Priority_Queue()
 
-
-pq.max_heap_insert(3)
+pq.max_heap_insert(2)
 print(pq.seq)
 pq.max_heap_insert(4)
 print(pq.seq)
@@ -73,9 +68,22 @@ pq.max_heap_insert(8)
 pq.max_heap_insert(10)
 pq.max_heap_insert(2)
 
-print(pq.seq)
-
-#can't creat a pq from zero. There are some errors.		
+print(pq.heap_max())
+print("pq.heap_max",pq.seq,pq.heap_size)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)
+print(pq.heap_max())
+print("pq.heap_max",pq.seq)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)
+print(pq.heap_extract_max())
+print("pq.heap_extract_max",pq.seq,pq.heap_size)		
 		
 		
 		
