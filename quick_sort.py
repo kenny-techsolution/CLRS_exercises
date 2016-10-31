@@ -1,10 +1,10 @@
 #need to remember the graph. for important indices: i j p r.
 def partition(seq,p,r):
 	i = p-1
-	pivat = seq[r]
+	pivot = seq[r]
 	#pointer = [0]*len(seq)
 	for j in range(p,r):
-		if seq[j]<=seq[r]:
+		if seq[j]<=pivot:
 			i += 1
 			seq[i],seq[j] = seq[j],seq[i]
 		#pointer[j],pointer[i]=9,1
