@@ -28,3 +28,8 @@ print(input)
 input = [2,8,7,1,3,5,6,4]
 quicksort(input, 0, len(input)-1)
 print(input)
+
+
+input=[1,3,12,2,9,7,6,8]
+quicksort(input, 0, len(input)-1)
+print(input)
