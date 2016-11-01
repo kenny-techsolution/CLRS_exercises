@@ -16,3 +16,8 @@ def insertion_sort(seq):
 input = list([4,1,3,6,3,7,8,9,10])
 
 print(insertion_sort(input))
+
+	
+input1 = [4,2,1,6,1,6,9,3,9,29]	
+
+print(insertion_sort(input1))
